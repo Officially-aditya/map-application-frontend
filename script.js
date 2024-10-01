@@ -73,6 +73,5 @@ async function initMap() {
 }
 
 window.initMap = initMap;
-window.togglePlayPause = togglePlayPause;
 
 console.log('initMap function defined');
