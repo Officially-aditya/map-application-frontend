@@ -4,7 +4,7 @@ let intervalId = null;
 
 async function loadRoute() {
     try {
-        const response = await fetch('/route');
+        const response = await fetch('/map-application-production.up.railway.app');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
