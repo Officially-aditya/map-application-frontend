@@ -45,7 +45,7 @@ async function initMap() {
 
     let currentIndex = 0;
 
-    const coordDisplay = document.getElementById('coord-display'); // Get reference to the display element
+    const coordDisplay = document.getElementById('coord-display');
 
     const intervalId = setInterval(() => {
         if (currentIndex < coordinates.length) {
@@ -53,8 +53,8 @@ async function initMap() {
             const newPosition = { lat: element.latitude, lng: element.longitude };
             marker.setPosition(newPosition);
             map.setCenter(newPosition);
-            const timestamp = new Date().toLocaleTimeString(); // Get current time
-            coordDisplay.innerHTML = `Latitude: ${element.latitude}, Longitude: ${element.longitude} (Time: ${timestamp})`; // Update display
+            const timestamp = new Date().toLocaleTimeString();
+            coordDisplay.innerHTML = `Latitude: ${element.latitude}, Longitude: ${element.longitude} (Time: ${timestamp})`;
             currentIndex++;
         } else {
             clearInterval(intervalId);
